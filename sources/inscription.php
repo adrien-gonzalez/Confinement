@@ -22,7 +22,25 @@
 			    	<input type="text" id="nom" name="nom" placeholder="Nom">
 			    	<input type="text" id="prenom" name="prenom" placeholder="Prenom">
 			        <input type="email" id="email" name="email" placeholder="Email">
-			        <input type="text" id="adresse" name="adresse" placeholder="Adresse">
+			        <select id="arrondissement">
+			        	<option>13001</option>
+			        	<option>13002</option>
+			        	<option>13003</option>
+			        	<option>13004</option>
+			        	<option>13005</option>
+			        	<option>13006</option>
+			        	<option>13007</option>
+			        	<option>13008</option>
+			        	<option>13009</option>
+			        	<option>13010</option>
+			        	<option>13011</option>
+			        	<option>13012</option>
+			        	<option>13013</option>
+			        	<option>13014</option>
+			        	<option>13015</option>
+			        	<option>13016</option>
+
+			        </select>
 			        <input type="password" id="password"  name="password" placeholder="Password (8 caractères minimum)">
 			        <input type="password" id="password2"  name="password2" placeholder="Confirm password">
 			        <input type="button" id="register" value="Créer un compte">

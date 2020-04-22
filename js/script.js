@@ -76,12 +76,12 @@ $(document).ready(function(){
 			prenom     = $("#prenom").val();
 			login  	   = $("#login").val();
 			email      = $("#email").val();
-			adresse	   = $("#adresse").val();
+			arrondissement	   = $("#arrondissement").val();
 			password   = $("#password").val();
 			password2  = $("#password2").val();
 				
 			url="../functions/function_register.php"
-			data={nom: nom, prenom: prenom, login: login, email: email, adresse: adresse, password: password, password2: password2}
+			data={nom: nom, prenom: prenom, login: login, email: email, arrondissement: arrondissement, password: password, password2: password2}
 			ajax()
 		}
 	});
