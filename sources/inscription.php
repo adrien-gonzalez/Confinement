@@ -22,6 +22,7 @@
 			    	<input type="text" id="nom" name="nom" placeholder="Nom">
 			    	<input type="text" id="prenom" name="prenom" placeholder="Prenom">
 			        <input type="email" id="email" name="email" placeholder="Email">
+			        <input type="text" id="adresse" name="adresse" placeholder="Adresse">
 			        <input type="password" id="password"  name="password" placeholder="Password (8 caractères minimum)">
 			        <input type="password" id="password2"  name="password2" placeholder="Confirm password">
 			        <input type="button" id="register" value="Créer un compte">

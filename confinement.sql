@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 22 avr. 2020 à 12:52
+-- Généré le :  mer. 22 avr. 2020 à 15:02
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -37,16 +37,17 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `adresse` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
-INSERT DELAYED INTO `utilisateurs` (`id`, `login`, `nom`, `prenom`, `email`, `password`) VALUES
-(5, 'Firefou', 'Gonzalez', 'Adrien', 'adrien1361@gmail.com', '$2y$12$jyI6hfxonKwDWhGWOICt7OKcbR.PphuSrTzkDK178.FGoWB6nb7fm');
+INSERT DELAYED INTO `utilisateurs` (`id`, `login`, `nom`, `prenom`, `email`, `adresse`, `password`) VALUES
+(6, 'Firefou', 'Gonzalez', 'Adrien', 'adrien1361@hotmail.fr', 'une adresse au hasard', '$2y$12$4p8IotRN0O6TBhuWicrJVOdk5bc3SHKJxqkeJUDX0b7C7GXK5hcvW');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

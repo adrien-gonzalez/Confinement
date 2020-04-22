@@ -10,11 +10,12 @@ $nom        = $_POST['nom'];
 $prenom     = $_POST['prenom'];
 $login  	= $_POST['login'];
 $email      = $_POST['email'];
+$adresse	= $_POST['adresse'];
 $password   = $_POST['password'];
 $password2  = $_POST['password2'];
 
 
-$subject = [$nom, $prenom, $login, $password];
+$subject = [$nom, $prenom, $login, $password, $adresse];
 $pattern = '/^[0-9ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ]*$/i';
 
 
@@ -72,7 +73,7 @@ else if($password != $password2)
 else
 {	
 	$password=password_hash($password, PASSWORD_BCRYPT, ["cost" => 12]);
-	$insert="INSERT INTO utilisateurs VALUES (NULL, '$login', '$nom', '$prenom', '$email', '$password')";
+	$insert="INSERT INTO utilisateurs VALUES (NULL, '$login', '$nom', '$prenom', '$email', '$adresse', '$password')";
 	mysqli_query($base, $insert);
 	echo "Inscrit";
 }

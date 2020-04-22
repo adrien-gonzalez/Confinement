@@ -10,6 +10,7 @@ function ajax(){
 
 			success:function(data)
 			{
+				console.log(data)
 				switch (data) {
 				case "Les caractères spéciaux ne sont pas acceptés":
 
@@ -69,17 +70,18 @@ function ajax(){
 $(document).ready(function(){
 	$("body").on("click","#register",function(){
 
-		if($("#nom").val() !="" && $("#prenom").val() !="" && $("#login").val() !="" && $("#email").val() !="" && $("#password").val() !="" && $("#password2").val() !="")
+		if($("#nom").val() !="" && $("#prenom").val() !="" && $("#login").val() !="" && $("#email").val() !="" && $("#password").val() !="" && $("#password2").val() !="" && $("#adresse").val() !="" )
 		{
 			nom        = $("#nom").val();
 			prenom     = $("#prenom").val();
 			login  	   = $("#login").val();
 			email      = $("#email").val();
+			adresse	   = $("#adresse").val();
 			password   = $("#password").val();
 			password2  = $("#password2").val();
 				
 			url="../functions/function_register.php"
-			data={nom: nom, prenom: prenom, login: login, email: email, password: password, password2: password2}
+			data={nom: nom, prenom: prenom, login: login, email: email, adresse: adresse, password: password, password2: password2}
 			ajax()
 		}
 	});
