@@ -1,4 +1,63 @@
-// INSCRIPTION
+
+var chemin = window.location.pathname
+
+
+if(chemin === "/Confinement/" || chemin === "/Confinement/index.php")
+{
+	ajax_annonces()
+}
+
+
+function ajax_annonces(){
+
+	$.ajax({
+			type:"POST",
+			url:"functions/function_annonces.php",
+
+			success:function(data)
+			{
+				
+				$(".annonces").remove()
+				var nbr=0;
+				for(i=0; i<Object.keys(data).length;i++)
+				{
+					if(data[i] =="{")
+					    {
+					        nbr++;
+					    }
+				}
+				for(i=0; i < nbr; i++)
+			    {	
+			    	$(".liste_annonces").append("<div id='annonces"+i+"' class='annonces'</div>")
+			    	$("#annonces"+i).append("<div id='utilisateur"+i+"' class='utilisateur'</div>")
+			    	$("#utilisateur"+i).append("<img id='image_profil"+i+"' class='image_profil' src='img/utilisateur.png' width='125px'>")
+
+					var result = JSON.parse(data)[i];     	
+					for(j=0;j < Object.keys(result).length; j++ )
+					{
+						var champ = Object.keys(result)[j]
+						
+						if(j==1)
+						{
+							console.log("ok")
+							var nom = Object.keys(result)[j]
+							var prenom = Object.keys(result)[j+1]
+							var arrondissement = Object.keys(result)[j+2]
+							$("#image_profil"+i).after("<p>"+result[nom]+result[prenom]+"("+result[arrondissement]+")</p>")
+						}
+						if(j==4)
+						{
+							var description = Object.keys(result)[j]
+							$("#utilisateur"+i).after("<textarea disabled id='texte_description"+i+"' class='texte_description'>"+result[description]+"</textarea>")
+							$("#texte_description"+i).after("<button class='envoyer' type=button name='envoyer'>envoyer</button>")
+						}
+					}
+			    }
+
+			}
+		});
+}
+
 
 function ajax(){
 
@@ -10,7 +69,6 @@ function ajax(){
 
 			success:function(data)
 			{
-				console.log(data)
 				switch (data) {
 				case "Les caractères spéciaux ne sont pas acceptés":
 					
@@ -96,6 +154,7 @@ $(document).ready(function(){
 			url="../functions/function_aide.php"
 			data={type_aide: type_aide, description: description}
 			ajax()
+			document.location.href="../"
 		}
 		else
 		{

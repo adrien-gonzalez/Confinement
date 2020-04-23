@@ -1,3 +1,43 @@
+/*PAGE D'ACCUEIL*/
+
+.liste_annonces{
+
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.annonces{
+
+	width: 800px;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.annonces textarea{
+
+	width: 400px;
+	height: 100px;
+	resize: none;
+	background-color: white;
+}
+
+
+.annonces button{
+
+	height: 50px;
+}
+
+
+.annonces p {
+text-align: center;}
+
+
+
+
+
 /*PAGE PROPOSITION D'AIDE*/
 
 .aide{

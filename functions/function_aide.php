@@ -4,7 +4,7 @@
 session_start();
 require "config.php";
 
-
+$_SESSION['login']="Firefou";
 $type_aide=$_POST['type_aide'];
 $description=$_POST['description'];
 $login=$_SESSION['login'];

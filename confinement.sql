@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 23 avr. 2020 à 10:52
+-- Généré le :  jeu. 23 avr. 2020 à 16:39
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -37,14 +37,15 @@ CREATE TABLE IF NOT EXISTS `annonces` (
   `type_aide` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `annonces`
 --
 
 INSERT DELAYED INTO `annonces` (`id`, `id_utilisateur`, `type_aide`, `description`) VALUES
-(3, 7, 'course', 'Disponible pour faire vos courses');
+(3, 7, 'course', 'Disponible pour faire vos courses'),
+(10, 7, 'conversation', 'test');
 
 -- --------------------------------------------------------
 
