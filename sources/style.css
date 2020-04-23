@@ -1,0 +1,49 @@
+/*PAGE PROPOSITION D'AIDE*/
+
+.aide{
+
+	background-image: url(../img/fond_aide.jpg);
+	background-size:cover; 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.form_aide{
+
+	width:100%;
+	display: flex;
+	justify-content: center;
+}
+
+.form_aide form{
+
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	margin-top: 10%; 
+	width: 500px;
+	padding: 10px;
+}
+
+.form_aide form input[type="button"]{
+
+	width: 200px;
+}
+
+.form_aide form input[type="button"]:hover{
+
+	cursor: pointer;	
+}
+
+.form_aide form textarea{
+
+	height: 150px;
+	resize: none;
+}
+
+.button_validate{
+
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}

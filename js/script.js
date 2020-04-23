@@ -13,8 +13,8 @@ function ajax(){
 				console.log(data)
 				switch (data) {
 				case "Les caractères spéciaux ne sont pas acceptés":
-
-					document.getElementById("login").placeholder = '*Les caractères spéciaux ne sont pas acceptés'
+					
+					$("#erreur").append("*Les caractères spéciaux ne sont pas acceptés")
 					break
 
 				case "utilisateur existant":
@@ -84,5 +84,22 @@ $(document).ready(function(){
 			data={nom: nom, prenom: prenom, login: login, email: email, arrondissement: arrondissement, password: password, password2: password2}
 			ajax()
 		}
+	});
+
+	$("body").on("click","#help",function(){
+
+		if(document.querySelector('input[name=type_aide]:checked') && $("#description").val() != "")
+		{
+			type_aide		= document.querySelector('input[name=type_aide]:checked').value
+			description		= $("#description").val();
+
+			url="../functions/function_aide.php"
+			data={type_aide: type_aide, description: description}
+			ajax()
+		}
+		else
+		{
+			$(".form_aide form textarea").css({"border": "1px solid red"})
+		}	
 	});
 });
