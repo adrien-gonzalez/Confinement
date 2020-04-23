@@ -58,7 +58,6 @@ function ajax_annonces(){
 }
 
 
-
 function ajax(){
 
 	$.ajax({
