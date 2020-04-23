@@ -42,13 +42,13 @@ function ajax_annonces(){
 							var nom = Object.keys(result)[j]
 							var prenom = Object.keys(result)[j+1]
 							var arrondissement = Object.keys(result)[j+2]
-							$("#image_profil"+i).after("<p>"+result[nom]+result[prenom]+"("+result[arrondissement]+")</p>")
+							$("#image_profil"+i).after("<p>"+result[nom]+" "+result[prenom]+" ("+result[arrondissement]+")</p>")
 						}
 						if(j==4)
 						{
 							var description = Object.keys(result)[j]
 							$("#utilisateur"+i).after("<textarea disabled id='texte_description"+i+"' class='texte_description'>"+result[description]+"</textarea>")
-							$("#texte_description"+i).after("<button class='envoyer' type=button name='envoyer'>envoyer</button>")
+							$("#texte_description"+i).after("<button class='envoyer' type=button name='envoyer'>Message</button>")
 						}
 					}
 			    }

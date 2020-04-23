@@ -1,6 +1,13 @@
 <!-- <!DOCTYPE html> -->
 
-<!-- REDIREGER VERS CONNEXION SI PAS CONNECTE -->
+<?php
+session_start();
+
+if(!isset($_SESSION['login']))
+{
+	header('Location: ../');
+}
+?>
 <html>
 	<head>
 		<title>Aide</title>

@@ -1,7 +1,56 @@
+/*HEADER*/
+
+
+li {
+    display: inline;
+  }
+  li {
+    float: left;
+  }
+
+  a {
+    display: block;
+    padding: 8px;
+    background-color: transparent; 
+  }
+ 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255)255, 255, 255);
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+
 /*PAGE D'ACCUEIL*/
+
+.accueil{
+
+	background-image: url(../img/fond_accueil.png);
+	background-size: cover;
+}
 
 .liste_annonces{
 
+	margin-top: 10%;
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -14,6 +63,8 @@
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
+	background-color: rgba(85, 107, 154, 0.5);
+	padding: 15px;
 }
 
 .annonces textarea{
@@ -22,18 +73,51 @@
 	height: 100px;
 	resize: none;
 	background-color: white;
+	padding: 10px;
 }
 
 
 .annonces button{
 
 	height: 50px;
+	padding: 10px;
+	background-color: #57BAED;
+	border: none;
+	color: white;
+	text-transform: uppercase;
+	transition: 0.5s;
 }
 
+.annonces button:hover{
+
+	cursor: pointer;
+	background-color: #23599F;
+}
 
 .annonces p {
-text-align: center;}
+	text-align: center;
+}
 
+.annonces .utilisateur {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (max-width: 1000px) {
+ 	 .annonces{
+
+		width: 500px;
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: rgba(85, 107, 154, 0.5);
+		padding: 15px;
+		flex-direction: column;
+		height: 350px;
+	}
+}
 
 
 
