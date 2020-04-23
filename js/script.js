@@ -39,7 +39,6 @@ function ajax_annonces(){
 						
 						if(j==1)
 						{
-							console.log("ok")
 							var nom = Object.keys(result)[j]
 							var prenom = Object.keys(result)[j+1]
 							var arrondissement = Object.keys(result)[j+2]
