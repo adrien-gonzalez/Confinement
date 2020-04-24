@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 24 avr. 2020 à 10:09
+-- Généré le :  jeu. 23 avr. 2020 à 16:39
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `annonces` (
   `type_aide` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `annonces`
@@ -45,32 +45,7 @@ CREATE TABLE IF NOT EXISTS `annonces` (
 
 INSERT DELAYED INTO `annonces` (`id`, `id_utilisateur`, `type_aide`, `description`) VALUES
 (3, 7, 'course', 'Disponible pour faire vos courses'),
-(15, 7, 'course', 'test'),
-(16, 7, 'autre', 'test'),
-(17, 8, 'course', 'Fais toute vos course Ã  domiciles');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `messages`
---
-
-DROP TABLE IF EXISTS `messages`;
-CREATE TABLE IF NOT EXISTS `messages` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `author` varchar(50) DEFAULT NULL,
-  `content` text DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=126 DEFAULT CHARSET=utf8 COMMENT='La table qui va contenir tous les messages voyons !';
-
---
--- Déchargement des données de la table `messages`
---
-
-INSERT DELAYED INTO `messages` (`id`, `author`, `content`, `created_at`) VALUES
-(123, 'Firefou', 'test', '2020-04-24 11:38:43'),
-(125, 'Overdoz', 'Salut', '2020-04-24 11:57:31');
+(10, 7, 'conversation', 'test');
 
 -- --------------------------------------------------------
 
@@ -85,18 +60,17 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `arrondissement` varchar(255) NOT NULL,
+  `arrondissement` int(11) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT DELAYED INTO `utilisateurs` (`id`, `login`, `nom`, `prenom`, `email`, `arrondissement`, `password`) VALUES
-(7, 'Firefou', 'Gonzalez', 'Adrien', 'adrien1361@hotmail.fr', '13001', '$2y$12$rkO2kiztKkHaBiIJpC9p0.Ke9GyGk6HkEl8uPFLfF6qdGkAlAQV3G'),
-(8, 'Overdoz', 'Baledent', 'Jeremy', 'jeremy.baledent]@laplateforme.io', '13003', '$2y$12$nF7QT4V/kMQjyzMNgXGqD.qGSwRhLnyW0STPvQ5fnXXKRqRJwI0Pu');
+(7, 'Firefou', 'Gonzalez', 'Adrien', 'adrien1361@hotmail.fr', 13001, '$2y$12$BRrsPfOBakJlQuq4AzcFVuoLVVa0WLqjD/j5PqKCn5IEKzhCTvnOy');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

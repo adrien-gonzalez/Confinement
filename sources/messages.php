@@ -14,7 +14,7 @@ if(!isset($_SESSION['login']))
 <head>
   <meta charset="UTF-8">
   <title>Notre super chat !</title>
-  <link rel="stylesheet" href="messagerie.css">
+  <link rel="stylesheet" href="style2.css">
   <script type="text/javascript" src="../js/jquery-3.5.0.min"></script>
   <script src="../js/app.js"></script>
 </head>
