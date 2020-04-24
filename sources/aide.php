@@ -57,7 +57,5 @@ if(!isset($_SESSION['login']))
 			    </form>
 		</div>
 	</main>
-
-
 </body>
 </html>
