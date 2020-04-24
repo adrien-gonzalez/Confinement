@@ -47,8 +47,9 @@ function ajax_annonces(){
 						if(j==4)
 						{
 							var description = Object.keys(result)[j]
+							var email = Object.keys(result)[j+1]
 							$("#utilisateur"+i).after("<textarea disabled id='texte_description"+i+"' class='texte_description'>"+result[description]+"</textarea>")
-							$("#texte_description"+i).after("<button class='envoyer' type=button name='envoyer'>Message</button>")
+							$("#texte_description"+i).after("<a href='mailto:"+result[email]+"'><button class='envoyer' type=button name='envoyer'>Message</button></a>")
 						}
 					}
 			    }

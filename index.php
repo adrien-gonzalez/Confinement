@@ -30,7 +30,7 @@
 		else
 		{
 		?>
-			<li><a href="sources/messagerie.php">Proposer mon aide</a></li>
+			<li><a href="sources/aide.php">Proposer mon aide</a></li>
 			<li><a href="sources/deconnexion.php">Déconnexion</a></li>
 		<?php
 		}

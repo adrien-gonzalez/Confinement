@@ -4,7 +4,7 @@
 session_start();
 require "config.php";
 
-$req_annonces="SELECT annonces.id, nom, prenom, arrondissement, description FROM utilisateurs, annonces WHERE id_utilisateur=utilisateurs.id";
+$req_annonces="SELECT annonces.id, nom, prenom, arrondissement, description, email FROM utilisateurs, annonces WHERE id_utilisateur=utilisateurs.id";
 $execute_req_annonces=mysqli_query($base, $req_annonces);
 $element=mysqli_num_rows($execute_req_annonces);
 

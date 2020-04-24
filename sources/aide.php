@@ -22,12 +22,21 @@ if(!isset($_SESSION['login']))
 	</head>
 
 <body class="aide">
-	<main>
+
+<header>
+	<ul>
+		<li><a href="../">Accueil</a></li>
+	</ul>
+</header>
+
+<main>
 		<div class="form_aide">
+
 	  			 <!-- erreur inscription-->
 			    <p id="erreur"></p>
 			    <!-- Help Form -->
 			    <form>
+			    	<h2 class="active"> Aide </h2>
 			    	<label>Votre type d'aide :</label><br>
 			    	<div>
 			    		<input type="radio" id="course" name="type_aide" value="course" checked>
@@ -48,5 +57,7 @@ if(!isset($_SESSION['login']))
 			    </form>
 		</div>
 	</main>
+
+
 </body>
 </html>
