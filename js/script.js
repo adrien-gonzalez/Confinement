@@ -116,7 +116,7 @@ function ajax(){
 
 				case "Inscrit":
 
-					// REDIRECTION
+					document.location.href="connexion.php"
 					break
 				}
 			}
