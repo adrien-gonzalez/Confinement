@@ -20,7 +20,7 @@ if(!isset($_SESSION['login']))
   <ul>
     <li><a href="../">Accueil</a></li>
     <li><a href="aide.php">Proposer mon aide</a></li> 
-    <li><a href="message.php">Discussion</a></li> 
+    <li><a href="messages.php">Discussion</a></li> 
     <li><a href="deconnexion.php">Déconnexion</a></li>
   </ul>
 </header>
